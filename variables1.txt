@@ -1,0 +1,203 @@
+1.package main
+
+import "fmt"
+
+func main() {
+   /* This is my first sample program. */
+   fmt.Println("Hello, World!")
+}
+$go run main.go
+Hello, World!
+
+2.package main
+import "fmt"
+
+func main() {
+   const LENGTH int =50
+   const WIDTH int = 6  
+   var area int
+
+   area = LENGTH * WIDTH
+   fmt.Printf("value of area : %d", area)   
+}
+$go run main.go
+value of area : 300
+3.package main
+import (  
+    "fmt"
+)
+
+func main() {  
+    x := 2
+    fmt.Println(x)     
+    {
+        fmt.Println(x) 
+        x := 3
+        fmt.Println(x) 
+    }
+    fmt.Println(x)     
+}
+$go run main.go
+2
+2
+3
+2
+4.package main
+import (  
+    "fmt"
+)
+
+func main() {  
+    s := "kaali"
+    x := "sandhya"
+    
+    fmt.Printf("%s %s\n",s,x)
+}
+$go run main.go
+kaali sandhya
+
+PRiNT variables
+5.package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Printf("%d:%s", 2020, "year")
+}
+$go run main.go
+2020:year
+Keyboard input golang
+6.package main
+
+import (
+    "bufio"
+    "fmt"
+    "os"
+)
+
+func main() {
+    reader := bufio.NewReader(os.Stdin)
+    fmt.Print("Enter your city: ")
+    city, _ := reader.ReadString('\n')
+    fmt.Print("You live in " + city)
+}
+Enter city name: rajampet
+You live in rajampet
+
+local variables vr global variables
+
+7.package main
+
+import "fmt"
+
+func main() {
+    x := 7
+    fmt.Println(x)
+}
+~ go run example.go
+7
+
+8.package main
+
+import "fmt"
+
+var x = 10
+
+func example() {
+    fmt.Println(x)
+}
+
+func main() {
+    fmt.Println(x)
+    example()
+}
+$go run main.go
+10
+10
+local variables
+
+9.package main
+
+import "fmt"
+
+func main() {
+   /* local variables */
+   var a, b, c int 
+
+   /* initialize variables */
+   a = 90
+   b = 20
+   c = a + b
+
+   fmt.Printf ("variables: a = %d, b = %d and c = %d\n", a, b, c)
+}
+$go run main.go
+variables: a = 90, b = 20 and c = 110
+global variables
+10.package main
+
+import "fmt"
+
+/* define global variable */
+var g int
+
+func main() {
+
+   /* define local variables */
+   var a, b int
+
+   /* initialize variables */
+   a = 100
+   b = 202
+   g = a + b
+
+   fmt.Printf("Values: a = %d, b = %d and g = %d\n", a, b, g)
+}
+$go run main.go
+Values: a = 100, b = 202 and g = 302
+variable priority
+11.package main
+
+import "fmt"
+
+/* declare global variable */
+var s int = 34
+
+func main() {
+   /* Declare local variable */
+   var s int = 11
+
+   fmt.Printf ("value: s = %d\n",  s)
+}
+$go run main.go
+value: s = 11
+Parameters
+12.package main
+
+import "fmt"
+
+/* Declare global variables */
+var a int = 203;
+
+func main() {
+   /* main() local variables */
+   var a int = 110
+   var b int = 29
+   var c int = 0
+
+   fmt.Printf("main() a = %d\n",  a);
+   c = sum(a,b);
+   fmt.Printf("main() c = %d\n",  c);
+}
+
+/* Function definition - two numbers added */
+func sum(a, b int) int {
+   fmt.Printf("sum() in the function a = %d\n",  a);
+   fmt.Printf("sum() in the function b = %d\n",  b);
+   return a + b;
+}
+$go run main.go
+main() a = 110
+sum() in the function a = 110
+sum() in the function b = 29
+main() c = 139

@@ -1,0 +1,52 @@
+package main
+
+import "fmt"
+
+func main() {
+   var S float64
+   S = 30.0
+   fmt.Println(S)
+   fmt.Printf("S is of type %T\n", S)
+}
+$go run main.go
+30
+S is of type float64
+package main
+
+import "fmt"
+
+func main() {
+   var S float64 = 20.0
+
+   Q := 42 
+   fmt.Println(S)
+   fmt.Println(Q)
+   fmt.Printf("S is of type %T\n", S)
+   fmt.Printf("Q is of type %T\n", Q)	
+}
+$go run main.go
+20
+42
+S is of type float64
+Q is of type int
+package main
+
+import "fmt"
+
+func main() {
+   var x, y, z = 10, 11, "foo"  
+	
+   fmt.Println(x)
+   fmt.Println(y)
+   fmt.Println(z)
+   fmt.Printf("x is of type %T\n", x)
+   fmt.Printf("y is of type %T\n", y)
+   fmt.Printf("z is of type %T\n", z)
+}
+$go run main.go
+10
+11
+foo
+x is of type int
+y is of type int
+z is of type string

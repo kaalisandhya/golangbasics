@@ -1,0 +1,127 @@
+INTEGER
+1.package main
+
+import "fmt"
+
+func main() {  
+    s := 1
+    k := 2
+    fmt.Printf("s is %d\n", s)
+    fmt.Printf("k is %d\n", k)
+}
+$go run main.go
+s is 1
+k is 2
+Float
+2.package main
+
+import "fmt"
+
+func main() {
+   banana := 5.0
+   bread := 9.0
+   price := banana + bread
+
+   fmt.Printf("")
+   fmt.Printf("Price:    %f\n",price)
+   vat := price * 0.15
+   fmt.Printf("VAT:      %f\n",vat)
+   total := vat + price
+   fmt.Printf("Total:    %f\n",total)
+   fmt.Printf("")
+}
+$go run main.go
+Price:    14.000000
+VAT:      2.100000
+Total:    16.100000
+Exchange variables
+3.package main
+
+import "fmt"
+
+func main() {  
+    s := 1
+    k := 2
+    s,k = k,s
+    fmt.Println(s)
+    fmt.Println(k)
+}
+$go run main.go
+2
+1
+String variable
+4.package main
+
+import "fmt"
+
+func main() {
+   var str1 =  "This is a GOLANG STRING"
+   fmt.Printf(str1)
+}
+
+$go run main.go
+This is a GOLANG STRING
+Multiple lines
+5.package main
+import "fmt"
+
+func main() {
+   var str1 =  "This is datatype"
+
+   // 1: function calls
+   fmt.Println(str1)
+   fmt.Println(str1)
+
+   // 2: use newline character
+   fmt.Printf("Hello World\nI am Go")  
+}
+$go run main.go
+This is datatype
+This is datatype
+Hello World
+I am Go
+String index
+6.package main
+import (
+    "fmt"
+)
+func main() {
+    s := "Golang string example"
+    for k, v := range s {
+        fmt.Printf("k:%d,v:%c == %d\n", k, v, v)
+    }
+}
+$go run main.go
+k:0,v:G == 71
+k:1,v:o == 111
+k:2,v:l == 108
+k:3,v:a == 97
+k:4,v:n == 110
+k:5,v:g == 103
+k:6,v:  == 32
+k:7,v:s == 115
+k:8,v:t == 116
+k:9,v:r == 114
+k:10,v:i == 105
+k:11,v:n == 110
+k:12,v:g == 103
+k:13,v:  == 32
+k:14,v:e == 101
+k:15,v:x == 120
+k:16,v:a == 97
+k:17,v:m == 109
+k:18,v:p == 112
+k:19,v:l == 108
+k:20,v:e == 101
+String join
+package main
+import (
+    "fmt"
+    "strings"
+)
+func main() {
+    s := strings.Join([]string{"sandhya", "kaali"}, ", ")
+    fmt.Println(s)
+}
+$go run main.go
+sandhya, kaali
